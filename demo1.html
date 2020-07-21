@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>一个简单的菜单动画效果</title>
+  <style>
+    .main-container{
+      text-align: center;
+    }
+    .title{
+      margin-top: 30px;
+      font-size: 18px;
+    }
+    .title.previous{
+      color: #000;
+      transition: color 2s;
+    }
+    .title.active{
+      color: pink;
+      transition: color 2s;
+    }
+    .line{
+      margin: 20px auto;
+    }
+    .line.previous{
+      width: 0;
+      transition: width 2s;
+    }
+    .line.active{
+      width: 100px;
+      border: 1px solid pink;
+      transition: width 2s;
+    }
+  </style>
+</head>
+<body>
+<div class="main-container">
+  <div id="title" class="title previous">前端百度学院</div>
+  <div id="line" class="line previous"></div>
+  <button id="btn">切换样式</button>
+</div>
+<script>
+  const title = document.getElementById("title")
+  const line = document.getElementById("line")
+  const btn = document.getElementById("btn")
+  let flag = true;
+  function btnhandler() {
+    if(flag) {
+      title.className = "active title"
+      line.className = "active line"
+      flag = false
+    } else {
+      title.className = "title previous"
+      line.className = "line previous"
+      flag = true
+    }
+  }
+  if(document.addEventListener){
+    btn.addEventListener('click', btnhandler);
+  } else {
+    btn.onclick = btnhandler();
+  }
+
+
+</script>
+</body>
+</html>
