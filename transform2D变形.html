@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>transform2D变形</title>
+</head>
+<style>
+  body{
+    padding: 20px;
+  }
+  .origin {
+    height: 64px;
+    width: 56px;
+    border: 1px solid #ebebeb;
+    text-align: center;
+    background-color: #f7f6f6;
+    color: #000000;
+    font-size: 14px;
+    line-height: 64px;
+    display: inline-block;
+    margin: 0 30px;
+  }
+  .box1 {
+    transform: skewX(30deg)
+  }
+  .box2 {
+    transform: scaleX(0.5);
+  }
+  .box3 {
+    transform: rotate(45deg);
+  }
+  .box4 {
+    transform: translate(10px, 20px);
+  }
+  .box5 {
+    transform: rotate(45deg) skewX(30deg)  translate(10px, 20px);
+  }
+
+</style>
+<body>
+
+<div>
+  <div class="origin">box0</div>
+  <div class="origin box1">box1</div>
+  <div class="origin box2">box2</div>
+  <div class="origin box3">box3</div>
+  <div class="origin box4">box4</div>
+  <div class="origin box5">box5</div>
+</div>
+
+</body>
+</html>
