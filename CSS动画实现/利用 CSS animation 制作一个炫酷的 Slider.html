@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /*.wrapper {*/
+        /*    position: relative;*/
+        /*    height: auto;*/
+        /*    min-height: 100%;*/
+        /*}*/
+        .main-content {
+            width: 100%;
+            height: 100vh;
+            /*background-color: antiquewhite;*/
+        }
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100px;
+            width: 80%;
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .pic {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            margin-right: 2%;
+        }
+        .footer #div0 {
+            background: url("./images/pic0.JPG") no-repeat;
+            background-size: cover;
+        }
+        .footer #div1 {
+            background: url("./images/pic1.JPG") no-repeat;
+            background-size: cover;
+        }
+        .footer #div2 {
+            background: url("./images/pic2.JPG") no-repeat;
+            background-size: cover;
+        }
+        .footer #div3 {
+            background: url("./images/pic3.JPG") no-repeat;
+            background-size: cover;
+        }
+        .footer #div4 {
+            background: url("./images/pic4.JPG") no-repeat;
+            background-size: cover;
+            margin-right: 0;
+        }
+        .dark {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            /*z-index: 20;*/
+        }
+        #div0:hover .dark, #div1:hover .dark, #div2:hover  .dark, #div3:hover  .dark, #div4:hover .dark {
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .BG0 {
+            background: url("./images/pic0.JPG") no-repeat;
+            background-size: cover;
+            animation: key0 0.5s ease-out;
+        }
+        @keyframes key0 {
+            0% {
+                transform: translateX(-500px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        .BG1 {
+            background: url("./images/pic1.JPG") no-repeat;
+            background-size: cover;
+            animation: key1 0.5s ease-out;
+        }
+        @keyframes key1 {
+            0% {
+                transform: translateY(350px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        .BG2 {
+            background: url("./images/pic2.JPG") no-repeat;
+            background-size: cover;
+            animation: key2 1s ease-in;
+        }
+        @keyframes key2 {
+            0% {
+                transform: scale(0.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .BG3 {
+            background: url("./images/pic3.JPG") no-repeat;
+            background-size: cover;
+            animation: key3 1s ease-out;
+
+        }
+        @keyframes key3 {
+            0% {
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .BG4 {
+            background: url("./images/pic4.JPG") no-repeat;
+            background-size: cover;
+            animation: key4 0.7s ease-in-out;
+
+        }
+        @keyframes key4 {
+            0% {
+                transform: rotate(-360deg) scale(0.1);
+            }
+            100% {
+                transform: rotate(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main-content"></div>
+    <div class="footer">
+        <div class="pic" id="div0">
+            <div class="dark"></div>
+        </div>
+        <div class="pic" id="div1">
+            <div class="dark"></div>
+        </div>
+        <div class="pic" id="div2">
+            <div class="dark"></div>
+        </div>
+        <div class="pic" id="div3">
+            <div class="dark"></div>
+        </div>
+        <div class="pic" id="div4">
+            <div class="dark"></div>
+        </div>
+    </div>
+</div>
+<script>
+    const main_content = document.getElementsByClassName("main-content")[0];
+    const div0 = document.getElementById("div0");
+    const div1 = document.getElementById("div1");
+    const div2 = document.getElementById("div2");
+    const div3 = document.getElementById("div3");
+    const div4 = document.getElementById("div4");
+
+    // const pics = document.getElementsByClassName("pic");
+    // const len = pics.length;
+    // for (let i = 0; i< len; i++) {
+    //     pics[i].onclick = myFunction(pics[i], i)
+    //     console.log(i, pics[i])
+    // }
+    // function myFunction(obj, i) {
+    //     alert("sssaa"+i)
+        // switch (i) {
+        //     case 0: main_content.className = "main-content " +"BG"+i; break;
+        //     case 1: main_content.className = "main-content " +"BG"+i; break;
+        //     default: main_content.className = "main-content " +"BG0"; break;
+        // }
+        // console.log(obj)
+    // }
+
+    div0.onclick = () => {
+        main_content.className = "main-content " +"BG0"
+    }
+    div1.onclick = () => {
+        main_content.className = "main-content " +"BG1"
+    }
+    div2.onclick = () => {
+        main_content.className = "main-content " +"BG2"
+    }
+    div3.onclick = () => {
+        main_content.className = "main-content " +"BG3"
+    }
+    div4.onclick = () => {
+        main_content.className = "main-content " +"BG4"
+    }
+
+</script>
+</body>
+</html>
