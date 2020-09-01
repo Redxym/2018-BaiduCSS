@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>把 AE 动画转换成 Web 原生动画</title>
+</head>
+<body>
+<div id="stage" style="width: 700px; height: 499px;"></div>
+<script src="lottie.js"></script>
+<script>
+  var stage = document.getElementById('stage');
+  lottie.loadAnimation({
+    container: stage,   //包含动画的DOM元素
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './data.json',   //动画的路径
+  })
+</script>
+</body>
+</html>
